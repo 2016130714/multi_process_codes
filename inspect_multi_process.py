@@ -21,7 +21,7 @@ inspecting followings
 '''
 
 # execute following line, for a test.
-# python v2_validate_namz.py -sr 16000 -nj 20 -d /mnt/nasdata1/NAMZ_DATA/ENGLISH_PROCESSED_DATA/BCS
+# python inspect_multi_process.py -sr 16000 -nj 20 -d /home/data/AAA
 # feel free to add quiet option (-q) if you want output to be compact.
 
 
@@ -37,7 +37,7 @@ from multiprocessing import Pool
 
 
 
-class inspect_namz():
+class inspect_data():
     def __init__(self):
 
         print(f"#######################  INSPECTION STARTED  #########################\nCurrent Time: [{time.strftime('%Y-%m-%d %H:%M:%S')}]")
@@ -439,5 +439,5 @@ class inspect_namz():
 
 if __name__ == '__main__':
 
-    inspect = inspect_namz()
+    inspect = inspect_data()
     inspect.multi_process_main()
