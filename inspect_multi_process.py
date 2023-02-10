@@ -290,6 +290,7 @@ class inspect_data():
                 pass_or_not = self.txt_pair_check(inner_path)
                 if pass_or_not == "FAIL":
                     print(f'------------ERROR: {inner} has "pair_check" problem. no wav pair for the text file.---------------')
+                    self.inner_cnt+=1
 
             # wav file inspect
             if inner.endswith('.wav'):
